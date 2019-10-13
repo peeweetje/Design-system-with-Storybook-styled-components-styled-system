@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import { ButtonContainer } from "./Button";
+import { StyledButton } from "./Button-Styled";
 import Box from "./Box";
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <ButtonContainer>Styled button</ButtonContainer>
+        <StyledButton onClick={() => console.log('clicked')}> Styled button</StyledButton>
         <Box
           color="black"
           bg="blue"
