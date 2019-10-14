@@ -1,6 +1,6 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import {StyledButton } from "../src/Button-Styled";
+import { StyledButton } from "../src/Button";
 
 export default {
   title: "Buttons|Button",

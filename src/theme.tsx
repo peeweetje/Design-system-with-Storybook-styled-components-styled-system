@@ -1,4 +1,5 @@
 export default {
+  name: "theme1",
   colors: {
     black: "#000e1a",
     white: "#fff",

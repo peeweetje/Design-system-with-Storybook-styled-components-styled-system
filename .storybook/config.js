@@ -1,13 +1,13 @@
-import {configure, addDecorator} from '@storybook/react';
-import {withA11y} from '@storybook/addon-a11y';
-import {withKnobs, text, boolean, number} from '@storybook/addon-knobs';
-//import {withThemesProvider} from 'storybook-addon-styled-component-theme';
+import { configure, addDecorator } from "@storybook/react";
+import React from "react";
+import { withA11y } from "@storybook/addon-a11y";
+import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
+import theme from "../src/theme";
+import { ThemeProvider } from "styled-components";
 
 addDecorator(withA11y);
 addDecorator(withKnobs, text, boolean, number);
-//const themes = [theme1, theme2];
-//addDecorator(withThemesProvider(themes));
-
+addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>);
 
 // automatically import all files ending in *.stories.tsx
 configure(
