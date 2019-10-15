@@ -1,23 +1,23 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import { StyledButton } from "../src/Button";
+import Button from "../src/Button";
 
 export default {
   title: "Buttons|Button",
-  component: StyledButton,
+  component: Button,
   parameters: {
     componentSubtitle: "Handy status label",
   },
 };
 
 export const text = () => (
-  <StyledButton onClick={action("clicked")}>Hello Button</StyledButton>
+  <Button onClick={action("clicked")}>Hello Button</Button>
 );
 
 export const emoji = () => (
-  <StyledButton onClick={action("clicked")}>
+  <Button onClick={action("clicked")}>
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
     </span>
-  </StyledButton>
+  </Button>
 );

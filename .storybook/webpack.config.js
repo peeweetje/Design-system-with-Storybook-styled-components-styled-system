@@ -10,6 +10,15 @@ module.exports = ({ config, mode }) => {
       },
       {
         loader: require.resolve("react-docgen-typescript-loader"),
+        options: {
+          propFilter: prop => {
+            console.log(prop.parent);
+            if (prop.parent) {
+              return !prop.parent.fileName.includes("node_modules");
+            }
+            return true;
+          },
+        },
       },
     ],
   });
