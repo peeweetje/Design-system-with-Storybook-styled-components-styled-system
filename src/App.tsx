@@ -1,6 +1,6 @@
 import React from "react";
-import { StyledButton } from "./Button";
-import Box from "./Box";
+import { StyledButton } from "./components/Button";
+import Box from "./components/Box";
 
 const App: React.FC = () => {
   return (

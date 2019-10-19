@@ -1,0 +1,45 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+
+import theme from "../../src/theme.tsx";
+
+<Meta title="Design System|Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem
+    title="theme.colors.blue"
+    subtitle="Blue"
+    colors={[theme.colors.navy, theme.colors.blue]}
+  />
+  <ColorItem
+    title="theme.colors.white"
+    subtitle="White"
+    colors={[theme.colors.white]}
+  />
+  <ColorItem
+    title="theme.colors.black"
+    subtitle="Black"
+    colors={[theme.colors.black]}
+  />
+  <ColorItem
+    title="theme.colors.blue"
+    subtitle="Navy"
+    colors={[theme.colors.navy]}
+  />
+  <ColorItem
+    title="theme.colors.blue"
+    subtitle="Blue Shades"
+    colors={[
+      theme.colors.blue100,
+      theme.colors.blue200,
+      theme.colors.blue300,
+      theme.colors.blue400,
+      theme.colors.blue500,
+      theme.colors.blue600,
+      theme.colors.blue700,
+      theme.colors.blue800,
+      theme.colors.blue900,
+    ]}
+  />
+</ColorPalette>
