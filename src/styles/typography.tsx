@@ -1,6 +1,7 @@
 export const typography = {
   type: {
-    primary: '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif',
+    primary:
+      '"Montserrat", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif',
     code:
       '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace',
   },

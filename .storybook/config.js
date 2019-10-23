@@ -5,9 +5,19 @@ import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 import theme from "../src/theme";
 import { ThemeProvider } from "styled-components";
 
+import { loadFontsForStorybook } from "../src/utils/fontLoader";
+import { GlobalStyle } from "../src/components/global";
+
 addDecorator(withA11y);
 addDecorator(withKnobs, text, boolean, number);
-addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>);
+addDecorator(story => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    {story()}
+  </ThemeProvider>
+));
 
 // automatically import all files ending in *.stories.tsx
 configure(require.context("../stories", true, /\.stories\.(tsx|mdx)$/), module);
+
+loadFontsForStorybook();
