@@ -10,14 +10,14 @@ const App: React.FC = () => {
           Styled button
         </StyledButton>
         <Box
-          color="black"
+          color="white"
           bg="blue"
           m={2}
           p={2}
           alignItems="center"
           justifyContent="center"
         >
-          Tomato
+          hello
         </Box>
       </header>
     </div>

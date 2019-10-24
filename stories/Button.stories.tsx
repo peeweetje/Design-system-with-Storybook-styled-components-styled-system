@@ -23,5 +23,5 @@ export const Secondary = () => (
 );
 
 export const Disabled = () => (
-  <Button onClick={action("clicked")}>Secondary</Button>
+  <Button onClick={action("clicked")}>disabled</Button>
 );
