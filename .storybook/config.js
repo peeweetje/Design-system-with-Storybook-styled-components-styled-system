@@ -1,12 +1,20 @@
-import { configure, addDecorator } from "@storybook/react";
+import { configure, addDecorator, addParameters } from "@storybook/react";
 import React from "react";
 import { withA11y } from "@storybook/addon-a11y";
 import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 import theme from "../src/theme";
 import { ThemeProvider } from "styled-components";
+import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks";
 
 import { loadFontsForStorybook } from "../src/utils/fontLoader";
 import { GlobalStyle } from "../src/components/global";
+
+addParameters({
+  docs: {
+    container: DocsContainer,
+    page: DocsPage,
+  },
+});
 
 addDecorator(withA11y);
 addDecorator(withKnobs, text, boolean, number);
