@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import styled from "styled-components";
 
-export interface IButtonProps {
+export interface ButtonProps {
   /** Description of onClick function which returns void **/
   onClick: () => void;
   /** Description of children **/
@@ -11,13 +11,13 @@ export interface IButtonProps {
 /**
  * This is a component description and should sit directly above your component
  */
-export const Button: FC<IButtonProps> = ({ onClick, children }) => (
+export const Button: FC<ButtonProps> = ({ onClick, children }) => (
   <StyledButton onClick={onClick}>{children}</StyledButton>
 );
 
 export default Button;
 
-export const StyledButton = styled.button<IButtonProps>`
+export const StyledButton = styled.button<ButtonProps>`
   border-radius: 3px;
   border: 2px solid ${props => props.theme.colors.blue500};
   background-color: ${props => props.theme.colors.blue};
