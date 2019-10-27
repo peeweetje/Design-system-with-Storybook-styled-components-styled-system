@@ -20,7 +20,8 @@ export default Button;
 export const StyledButton = styled.button<ButtonProps>`
   border-radius: 3px;
   border: 2px solid ${props => props.theme.colors.blue500};
-  background-color: ${props => props.theme.colors.blue};
+  background-color: ${props => props.theme.colors.blue400};
+  color: ${props => props.theme.colors.black};
   margin: 0 1em;
   padding: 0.25em 1em;
 `;

@@ -3,6 +3,7 @@ module.exports = {
   extends: [
     "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
     "plugin:@typescript-eslint/recommended", // Uses the recommended rules from @typescript-eslint/eslint-plugin
+    "plugin:jsx-a11y/recommended", // Use plugin for accessibility linting
   ],
   parserOptions: {
     ecmaVersion: 2018, // Allows  parsing of modern ECMAScript features

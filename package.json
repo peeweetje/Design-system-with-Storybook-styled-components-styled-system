@@ -50,6 +50,7 @@
     "@types/styled-system": "^5.1.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "react-docgen-typescript-loader": "^3.3.0",
     "storybook-addon-styled-component-theme": "^1.2.5"
   }
