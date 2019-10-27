@@ -1,8 +1,8 @@
 import React from "react";
 import { StyledButton } from "./components/Button";
 import Box from "./components/Box";
-import Header from "./components/header";
-import ButtonSS from "./components/ButtonSS";
+import Header from "./components/Header";
+import ButtonStyledSystem from "./components/ButtonStyledSystem";
 
 const App: React.FC = () => {
   return (
@@ -21,9 +21,12 @@ const App: React.FC = () => {
       >
         hello
       </Box>
-      <ButtonSS variant="primary" onClick={() => console.log("button")}>
+      <ButtonStyledSystem
+        variant="primary"
+        onClick={() => console.log("button")}
+      >
         Primary
-      </ButtonSS>
+      </ButtonStyledSystem>
     </div>
   );
 };
