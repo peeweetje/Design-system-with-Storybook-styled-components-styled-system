@@ -20,15 +20,13 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint:ts": "eslint . --ext .ts,.jsx",
-    "lint:tsx:fix": "npm run lint:ts -- --fix"
+    "lint": "eslint './**/*.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "npm run --silent lint:ts:fix",
       "git add"
     ]
   },
