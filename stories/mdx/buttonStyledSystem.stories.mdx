@@ -1,0 +1,26 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks";
+import { ButtonStyledSystem } from "../../src/components/button-styled-system/ButtonStyledSystem.tsx";
+
+<Meta title="Design System|ButtonStyledSystem" component={ButtonStyledSystem} />
+
+# Buttons
+
+These are the `Buttons` we are using in our project.
+
+<Preview>
+  <Story name="primary">
+    <ButtonStyledSystem variant="primary">primary</ButtonStyledSystem>
+  </Story>
+  <Story name="secondary">
+    <ButtonStyledSystem variant="secondary">secondary</ButtonStyledSystem>
+  </Story>
+  <Story name="disabled">
+    <ButtonStyledSystem variant="disabled">disabled</ButtonStyledSystem>
+  </Story>
+</Preview>
+
+<Props of={ButtonStyledSystem} />
+
+## Usage
+
+the buttons are used for your project.

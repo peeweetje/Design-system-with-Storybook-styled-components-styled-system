@@ -1,6 +1,6 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import ButtonStyledSystem from "../src/components/ButtonStyledSystem";
+import ButtonStyledSystem from "../src/components/button-styled-system/ButtonStyledSystem";
 
 export default {
   title: "Buttons|ButtonStyledSystem",
