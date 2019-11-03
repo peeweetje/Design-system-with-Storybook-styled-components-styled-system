@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from "styled-components";
-import theme from "../theme";
-import { typography } from "../styles/typography";
+import theme from "./theme";
+import { typography } from "./typography";
 
 export const bodyStyles = css`
   font-family: ${typography.type.primary};

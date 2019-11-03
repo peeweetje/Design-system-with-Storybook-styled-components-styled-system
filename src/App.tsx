@@ -1,12 +1,14 @@
 import React from "react";
-import { StyledButton } from "./components/Button";
+import { StyledButton } from "./components/button/Button";
 import Box from "./components/Box";
-import Header from "./components/Header";
-import ButtonStyledSystem from "./components/ButtonStyledSystem";
+import Header from "./components/header/Header";
+import Sidebar from "./components/sidebar/Sidebar";
+import ButtonStyledSystem from "./components/button-styled-system/ButtonStyledSystem";
 
 const App: React.FC = () => {
   return (
     <div>
+      <Sidebar />
       <Header />
       <StyledButton onClick={() => console.log("clicked")}>
         Styled button

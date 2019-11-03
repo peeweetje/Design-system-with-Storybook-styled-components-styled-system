@@ -4,8 +4,6 @@ import { variant, VariantArgs } from "styled-system";
 import React, { FC, ReactNode } from "react";
 import { typography } from "styled-system";
 
-// test if the linting works
-
 export interface ButtonStyledSystemProps {
   /** Description of onClick function which returns void **/
   onClick: () => void;
