@@ -7,18 +7,24 @@ import { typography } from "styled-system";
 export interface ButtonStyledSystemProps {
   /** Description of onClick function which returns void **/
   onClick: () => void;
-  /** Description of children **/
+  /** Text you want to display in your button, or an icon **/
   children?: ReactNode | null;
-  /**  Button variant - primary, secondary**/
+  /**  Button variant - primary, secondary, disabled**/
   variant: string;
+  disabled?: boolean;
 }
 
 export const ButtonStyledSystem: FC<ButtonStyledSystemProps> = ({
   onClick,
   children,
+  disabled = false,
   ...buttonStyles
 }) => (
-  <StyledButtonStyledSystem {...buttonStyles} onClick={onClick}>
+  <StyledButtonStyledSystem
+    disabled={disabled}
+    {...buttonStyles}
+    onClick={onClick}
+  >
     {children}
   </StyledButtonStyledSystem>
 );
@@ -27,37 +33,58 @@ export default ButtonStyledSystem;
 
 // TODO: Consider: Maybe just use a global injected font (Montserrat), instead of setting a font here.
 
-// TODO: Add hover styles for primary and secondary button
-
 // TODO2: Add border-styles and radii to theme
+
+const buttonSpacing = {
+  py: [2],
+  px: [3],
+  m: [2],
+};
 
 const StyledButtonStyledSystem = styled("button")(
   typography,
   {
     appearance: "none",
     fontFamily: "Helvetica",
+    "&:hover": {
+      cursor: "pointer",
+    },
   },
   variant({
     variants: {
       primary: {
         border: "none",
-        color: "white",
-        bg: "blue400",
+        color: "greys.0",
+        bg: "blues.3",
         borderRadius: "3px",
-        py: [2],
-        px: [3],
-        m: [2],
+        ...buttonSpacing,
+        "&:hover": {
+          bg: "blues.4",
+        },
       },
       secondary: {
-        color: "blue400",
-        bg: "white",
+        color: "blues.3",
+        bg: "greys.0",
         borderWidth: "2px",
         borderStyle: "solid",
-        borderColor: "blue400",
+        borderColor: "blues.3",
         borderRadius: "3px",
-        py: [2],
-        px: [3],
-        m: [2],
+        ...buttonSpacing,
+        "&:hover": {
+          color: "blues.4",
+          borderColor: "blues.5",
+        },
+      },
+      disabled: {
+        border: "none",
+        color: "greys.7",
+        bg: "greys.3",
+        borderRadius: "3px",
+        ...buttonSpacing,
+        "&:hover": {
+          bg: "greys.4",
+          cursor: "not-allowed",
+        },
       },
     },
   } as VariantArgs)

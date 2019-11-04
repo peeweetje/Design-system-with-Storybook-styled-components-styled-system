@@ -26,6 +26,6 @@ addDecorator(story => (
 ));
 
 // automatically import all files ending in *.stories.tsx
-configure(require.context("../stories", true, /\.stories\.(tsx|mdx)$/), module);
+configure(require.context("../src", true, /\.stories\.(tsx|mdx)$/), module);
 
 loadFontsForStorybook();
