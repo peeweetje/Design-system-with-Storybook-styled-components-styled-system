@@ -5,7 +5,7 @@ import { typography } from "./typography";
 export const bodyStyles = css`
   font-family: ${typography.type.primary};
   font-size: ${typography.size.s3}px;
-  color: ${theme.colors.black};
+  color: ${theme.colors.greys[7]};
   margin: 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -73,7 +73,7 @@ export const bodyStyles = css`
     padding: 11px 1rem;
     white-space: pre-wrap;
     background: rgba(0, 0, 0, 0.05);
-    color: ${theme.colors.black};
+    color: ${theme.colors.greys[7]};
     border-radius: 3px;
     margin: 1rem 0;
   }
