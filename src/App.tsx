@@ -1,15 +1,13 @@
 import React from "react";
 import { StyledButton } from "./components/button/Button";
-import Box from "./components/Box";
+import Box from "./components/box/Box";
 import Header from "./components/header/Header";
-import Sidebar from "./components/sidebar/Sidebar";
 import ButtonStyledSystem from "./components/button-styled-system/ButtonStyledSystem";
 
 const App: React.FC = () => {
   return (
     <div>
-      <Sidebar />
-      <Header />
+      <Header>In the future component examples will be here!</Header>
       <StyledButton onClick={() => console.log("clicked")}>
         Styled button
       </StyledButton>
@@ -20,6 +18,8 @@ const App: React.FC = () => {
         p={2}
         alignItems="center"
         justifyContent="center"
+        width="fit-content"
+        borderRadius={4}
       >
         hello
       </Box>
