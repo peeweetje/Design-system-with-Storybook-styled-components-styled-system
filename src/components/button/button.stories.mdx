@@ -1,7 +1,7 @@
 import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks";
 import { Button } from "./Button.tsx";
 
-<Meta title="Design System|Button" component={Button} />
+<Meta title="Components|Button" component={Button} />
 
 # Buttons
 
@@ -9,13 +9,15 @@ These are the `Buttons` we are using in our project.
 
 <Preview>
   <Story name="primary">
-    <Button status="primary">primary</Button>
+    <Button primary>primary</Button>
   </Story>
   <Story name="secondary">
-    <Button status="secondary">secondary</Button>
+    <Button secondary>secondary</Button>
   </Story>
   <Story name="disabled">
-    <Button status="disabled">disabled</Button>
+    <Button disabled disabled={true}>
+      disabled
+    </Button>
   </Story>
 </Preview>
 

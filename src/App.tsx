@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { StyledButton } from "./components/button/Button";
 import Box from "./components/box/Box";
 import Header from "./components/header/Header";
@@ -6,9 +7,9 @@ import ButtonStyledSystem from "./components/button-styled-system/ButtonStyledSy
 
 const App: React.FC = () => {
   return (
-    <div>
+    <AppStyling>
       <Header>In the future component examples will be here!</Header>
-      <StyledButton onClick={() => console.log("clicked")}>
+      <StyledButton primary="primary" onClick={() => console.log("clicked")}>
         Styled button
       </StyledButton>
       <Box
@@ -29,8 +30,10 @@ const App: React.FC = () => {
       >
         Primary
       </ButtonStyledSystem>
-    </div>
+    </AppStyling>
   );
 };
 
 export default App;
+
+export const AppStyling = styled.div``;
