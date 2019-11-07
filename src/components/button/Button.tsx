@@ -34,6 +34,9 @@ export const Button: FC<ButtonProps> = ({
 
 export default Button;
 
+// TODO: Add hover styles for button
+// TODO2: Change primary and secondary props to variants
+
 export const StyledButton = styled.button<ButtonProps>`
   border-radius: 3px;
   border: 2px solid ${props => props.theme.colors.blues[3]};

@@ -4,10 +4,14 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
+import { GlobalStyle } from "./styles/global";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <App />
+    <>
+      <GlobalStyle />
+      <App />
+    </>
   </ThemeProvider>,
   document.getElementById("root")
 );

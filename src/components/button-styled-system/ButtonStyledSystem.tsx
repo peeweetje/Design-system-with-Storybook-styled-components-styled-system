@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { variant, VariantArgs } from "styled-system";
 import React, { FC, ReactNode } from "react";
-import { typography } from "styled-system";
+import theme from "../../styles/theme";
 
 export interface ButtonStyledSystemProps {
   /** Description of onClick function which returns void **/
@@ -31,23 +31,30 @@ export const ButtonStyledSystem: FC<ButtonStyledSystemProps> = ({
 
 export default ButtonStyledSystem;
 
-// TODO: Consider: Maybe just use a global injected font (Montserrat), instead of setting a font here.
-
-// TODO2: Add border-styles and radii to theme
+// TODO: Add border-styles and radii to theme
 
 const buttonSpacing = {
   py: [2],
   px: [3],
-  m: [2],
 };
 
 const StyledButtonStyledSystem = styled("button")(
-  typography,
   {
     appearance: "none",
-    fontFamily: "Helvetica",
     "&:hover": {
       cursor: "pointer",
+    },
+    "&:disabled": {
+      border: "none",
+      color: theme.colors.greys[6],
+      backgroundColor: theme.colors.greys[3],
+      borderRadius: "3px",
+      padding: `${theme.space[2]}px ${theme.space[3]}px`,
+      "&:hover": {
+        backgroundColor: theme.colors.greys[4],
+        color: theme.colors.greys[7],
+        cursor: "not-allowed",
+      },
     },
   },
   variant({
@@ -72,18 +79,7 @@ const StyledButtonStyledSystem = styled("button")(
         ...buttonSpacing,
         "&:hover": {
           color: "blues.4",
-          borderColor: "blues.5",
-        },
-      },
-      disabled: {
-        border: "none",
-        color: "greys.7",
-        bg: "greys.3",
-        borderRadius: "3px",
-        ...buttonSpacing,
-        "&:hover": {
-          bg: "greys.4",
-          cursor: "not-allowed",
+          borderColor: "blues.4",
         },
       },
     },
