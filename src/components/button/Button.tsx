@@ -34,7 +34,6 @@ export const Button: FC<ButtonProps> = ({
 
 export default Button;
 
-// TODO: Add hover styles for button
 // TODO2: Change primary and secondary props to variants
 
 export const StyledButton = styled.button<ButtonProps>`
@@ -42,11 +41,14 @@ export const StyledButton = styled.button<ButtonProps>`
   border: 2px solid ${props => props.theme.colors.blues[3]};
   margin: 0 0.5em;
   padding: 0.5em 1em;
+  &:hover {
+    background-color: ${props => props.theme.colors.blues[4]};
+  }
   ${props =>
     props.primary &&
     css`
       background-color: ${props => props.theme.colors.blues[3]};
-      color: white;
+      color: #fff;
     `};
   ${props =>
     props.secondary &&
@@ -61,5 +63,9 @@ export const StyledButton = styled.button<ButtonProps>`
       color: black;
       border: 2px solid ${props => props.theme.colors.greys[4]};
       cursor: not-allowed;
+      &:hover {
+        background-color: ${props => props.theme.colors.greys[5]};
+        color: white;
+      }
     `};
 `;
