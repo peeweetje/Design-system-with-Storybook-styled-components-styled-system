@@ -1,11 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 import { StyledButton } from "./components/button/Button";
 import Box from "./components/box/Box";
 import Header from "./components/header/Header";
 import ButtonStyledSystem from "./components/button-styled-system/ButtonStyledSystem";
+import Modal from "./components/modal/Modal";
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
     <AppStyling>
       <Header>In the future component examples will be here!</Header>
@@ -30,6 +31,7 @@ const App: React.FC = () => {
       >
         Primary
       </ButtonStyledSystem>
+      <Modal onClick={() => console.log("modal")}>I'm the Modal</Modal>
     </AppStyling>
   );
 };
