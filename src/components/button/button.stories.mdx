@@ -1,4 +1,5 @@
 import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks";
+import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 import { Button } from "./Button.tsx";
 
 <Meta title="Components|Button" component={Button} />
@@ -15,7 +16,7 @@ These are the `Buttons` we are using in our project.
     <Button secondary>secondary</Button>
   </Story>
   <Story name="disabled">
-    <Button disabled disabled={true}>
+    <Button  disabled={boolean("Disabled", true)}>
       disabled
     </Button>
   </Story>

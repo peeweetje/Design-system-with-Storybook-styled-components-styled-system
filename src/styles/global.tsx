@@ -31,7 +31,6 @@ export const bodyStyles = css`
   input,
   textarea,
   select {
-    outline: none;
     font-family: ${typography.type.primary};
   }
   sub,
