@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import styled from "styled-components";
 import { StyledButton } from "./components/button/Button";
 import Box from "./components/box/Box";
@@ -7,6 +7,10 @@ import ButtonStyledSystem from "./components/button-styled-system/ButtonStyledSy
 import Modal from "./components/modal/Modal";
 
 const App: FC = () => {
+  const [showModal, setModal] = useState(false);
+  const openModal = () => setModal(true);
+  const closeModal = () => setModal(false);
+
   return (
     <AppStyling>
       <Header>In the future component examples will be here!</Header>
@@ -25,13 +29,16 @@ const App: FC = () => {
       >
         hello
       </Box>
-      <ButtonStyledSystem
-        variant="primary"
-        onClick={() => console.log("button")}
-      >
+      <ButtonStyledSystem onClick={closeModal} variant="primary">
         Primary
       </ButtonStyledSystem>
-      <Modal onClick={() => console.log("modal")}>I'm the Modal</Modal>
+      {!showModal && (
+        <Modal onClick={openModal}>
+          <HeadingStyling>Modal heading</HeadingStyling>
+          <ParStyling>This is modal content</ParStyling>
+          <ButtonStyling onClick={closeModal}>X</ButtonStyling>
+        </Modal>
+      )}
     </AppStyling>
   );
 };
@@ -39,3 +46,28 @@ const App: FC = () => {
 export default App;
 
 export const AppStyling = styled.div``;
+
+export const ButtonStyling = styled.button`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3em;
+  height: 3em;
+  margin: 4em 0em 1em 40em;
+  border-radius: 3px;
+  border: 2px solid ${props => props.theme.colors.blues[3]};
+  cursor: pointer;
+  background-color: ${props => props.theme.colors.blues[4]};
+  &:hover {
+    background-color: ${props => props.theme.colors.blues[3]};
+  }
+`;
+
+export const HeadingStyling = styled.h1`
+  margin-left: 5em;
+`;
+
+export const ParStyling = styled.p`
+  margin-left: 12em;
+`;

@@ -1,18 +1,17 @@
-import React, { FC, ReactNode, useState } from "react";
+import React, { FC, ReactNode } from "react";
 import styled from "styled-components";
 
 export interface ModalProps {
   /** Description of onClick function which returns void **/
-  onClick: () => void;
+  onClick?: () => void;
   /** Text you want to display in your modal **/
   children?: ReactNode | null;
-  toggleModal?: boolean;
+  showModal?: boolean;
+  openModal?: boolean;
+  closeModal?: boolean;
 }
 
 export const Modal: FC<ModalProps> = ({ children, onClick }) => {
-  const [isToggled, setToggled] = useState(false);
-  const toggleModal = () => setToggled(!isToggled);
-
   return <StyledModal onClick={onClick}>{children}</StyledModal>;
 };
 
@@ -20,11 +19,11 @@ export default Modal;
 
 export const StyledModal = styled.div<ModalProps>`
   position: absolute;
-  box-sizing: border-box;
-  height: 25%;
-  width: 50%;
-  left: 25%;
-  top: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30%;
+  width: 40%;
   padding: 16px;
   z-index: 1;
   border-radius: 3px;
