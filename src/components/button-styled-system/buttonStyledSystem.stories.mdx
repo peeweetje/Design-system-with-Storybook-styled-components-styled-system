@@ -1,4 +1,5 @@
 import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks";
+import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 import { ButtonStyledSystem } from "./ButtonStyledSystem.tsx";
 
 <Meta title="Components|ButtonStyledSystem" component={ButtonStyledSystem} />
@@ -15,7 +16,7 @@ These is an example of `Buttons` which uses styled-system styling.
     <ButtonStyledSystem variant="secondary">secondary</ButtonStyledSystem>
   </Story>
   <Story name="disabled">
-    <ButtonStyledSystem disabled={true}>disabled</ButtonStyledSystem>
+    <ButtonStyledSystem disabled={boolean("Disabled", true)}>disabled</ButtonStyledSystem>
   </Story>
 </Preview>
 
