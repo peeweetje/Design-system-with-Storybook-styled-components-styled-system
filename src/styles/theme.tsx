@@ -2,7 +2,7 @@ export const theme = {
   name: "theme1",
   colors: {
     blue: "#007ce0",
-    navy: "#004175",
+    teal: "#E8FFFE5",
     blues: [
       "#EBF8FF",
       "#BEE3F8",
