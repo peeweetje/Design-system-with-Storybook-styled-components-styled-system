@@ -36,6 +36,7 @@ const App: FC = () => {
         <Modal onClick={openModal}>
           <HeadingStyling>Modal heading</HeadingStyling>
           <ParStyling>This is modal content</ParStyling>
+          <ButtonStyling onClick={closeModal}>X</ButtonStyling>
         </Modal>
       )}
     </AppStyling>
@@ -54,4 +55,16 @@ export const HeadingStyling = styled.h1`
 export const ParStyling = styled.p`
   justify-content: center;
   align-items: center;
+`;
+
+export const ButtonStyling = styled.button`
+  width: 3em;
+  height: 3em;
+  border-radius: 3px;
+  border: 2px solid ${props => props.theme.colors.blues[3]};
+  cursor: pointer;
+  background-color: ${props => props.theme.colors.blues[4]};
+  &:hover {
+    background-color: ${props => props.theme.colors.blues[3]};
+  }
 `;

@@ -7,17 +7,12 @@ export interface ModalProps {
   /** Text you want to display in your modal **/
   children?: ReactNode | null;
   showModal?: boolean;
-  openModal?: boolean;
-  closeModal?: () => void;
+  openModal?: () => boolean;
+  closeModal?: () => boolean;
 }
 
-export const Modal: FC<ModalProps> = ({ children, onClick, closeModal }) => {
-  return (
-    <StyledModal onClick={onClick}>
-      {children}
-      <ButtonStyling onClick={closeModal}>X</ButtonStyling>
-    </StyledModal>
-  );
+export const Modal: FC<ModalProps> = ({ children, onClick }) => {
+  return <StyledModal onClick={onClick}>{children}</StyledModal>;
 };
 
 export default Modal;
@@ -33,16 +28,4 @@ export const StyledModal = styled.div<ModalProps>`
   border: 2px solid ${props => props.theme.colors.blues[3]};
   background-color: white;
   transition: all 0.3s ease-out;
-`;
-
-export const ButtonStyling = styled.button`
-  width: 3em;
-  height: 3em;
-  border-radius: 3px;
-  border: 2px solid ${props => props.theme.colors.blues[3]};
-  cursor: pointer;
-  background-color: ${props => props.theme.colors.blues[4]};
-  &:hover {
-    background-color: ${props => props.theme.colors.blues[3]};
-  }
 `;
