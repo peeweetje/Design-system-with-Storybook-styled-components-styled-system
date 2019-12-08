@@ -5,6 +5,10 @@ import Box from "./components/box/Box";
 import Header from "./components/header/Header";
 import ButtonStyledSystem from "./components/button-styled-system/ButtonStyledSystem";
 import Modal from "./components/modal/Modal";
+import {
+  Breadcrumb,
+  BreadcrumbPortal,
+} from "./components/breadcrumb/BreadCrumb";
 
 const App: FC = () => {
   const [showModal, setModal] = useState(false);
@@ -39,6 +43,10 @@ const App: FC = () => {
           <ButtonStyling onClick={closeModal}>X</ButtonStyling>
         </Modal>
       )}
+      <BreadcrumbPortal />
+      <Breadcrumb to="/one">Breadcrumb1</Breadcrumb>
+      <Breadcrumb to="/two">Breadcrumb2</Breadcrumb>
+      <Breadcrumb to="/two">Breadcrumb3</Breadcrumb>
     </AppStyling>
   );
 };

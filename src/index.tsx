@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { ThemeProvider } from "styled-components";
@@ -10,7 +11,9 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </>
   </ThemeProvider>,
   document.getElementById("root")
