@@ -1,0 +1,29 @@
+import ReactDOM from "react-dom";
+import { NavLink } from "react-router-dom";
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks";
+import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
+import { BreadCrumb } from "./BreadCrumb.tsx";
+
+<Meta title="Components|BreadCrumb" component={BreadCrumb} />
+
+# Buttons
+
+These are the `Breadcrumbs` we are using in our project.
+
+<Preview>
+  <Story name="BreadCrumb1">
+    <Breadcrumb to="/one">Breadcrumb1</Breadcrumb>
+  </Story>
+  <Story name="BreadCrumb2">
+    <Breadcrumb to="/two">Breadcrumb2</Breadcrumb>
+  </Story>
+  <Story name="BreadCrumb3">
+    <Breadcrumb to="/two">Breadcrumb3</Breadcrumb>
+  </Story>
+</Preview>
+
+## Props
+
+These are the props were using.
+
+<Props of={BreadCrumb} />

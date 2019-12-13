@@ -6,7 +6,7 @@ import Header from "./components/header/Header";
 import ButtonStyledSystem from "./components/button-styled-system/ButtonStyledSystem";
 import Modal from "./components/modal/Modal";
 import {
-  Breadcrumb,
+  BreadCrumb,
   BreadcrumbPortal,
 } from "./components/breadcrumb/BreadCrumb";
 
@@ -44,9 +44,9 @@ const App: FC = () => {
         </Modal>
       )}
       <BreadcrumbPortal />
-      <Breadcrumb to="/one">Breadcrumb1</Breadcrumb>
-      <Breadcrumb to="/two">Breadcrumb2</Breadcrumb>
-      <Breadcrumb to="/two">Breadcrumb3</Breadcrumb>
+      <BreadCrumb to="/one">BreadCrumb1</BreadCrumb>
+      <BreadCrumb to="/two">BreadCrumb2</BreadCrumb>
+      <BreadCrumb to="/two">BreadCrumb3</BreadCrumb>
     </AppStyling>
   );
 };

@@ -4,7 +4,9 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export interface BreadCrumbProps {
-  children?: ReactNode | null;
+  /** Text you want to display in your button, or an icon **/
+  children: ReactNode | null;
+  /** linking to another page **/
   to: string;
 }
 
@@ -14,7 +16,7 @@ export const BreadcrumbPortal = () => (
   </nav>
 );
 
-export const Breadcrumb: FC<BreadCrumbProps> = ({ children, to, ...props }) => {
+export const BreadCrumb: FC<BreadCrumbProps> = ({ children, to, ...props }) => {
   const [portalNode, setPortalNode] = useState();
 
   useEffect(() => {
