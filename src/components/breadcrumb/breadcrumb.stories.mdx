@@ -2,7 +2,8 @@ import ReactDOM from "react-dom";
 import { NavLink } from "react-router-dom";
 import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks";
 import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
-import { BreadCrumb } from "./BreadCrumb.tsx";
+import { action } from '@storybook/addon-actions';
+import { BreadCrumb, BreadcrumbPortal } from "./BreadCrumb.tsx";
 
 <Meta title="Components|BreadCrumb" component={BreadCrumb} />
 
@@ -11,14 +12,15 @@ import { BreadCrumb } from "./BreadCrumb.tsx";
 These are the `Breadcrumbs` we are using in our project.
 
 <Preview>
+    <Story name="breadcrumbportal"><BreadcrumbPortal/></Story>
   <Story name="BreadCrumb1">
-    <Breadcrumb to="/one">Breadcrumb1</Breadcrumb>
+    <Breadcrumb onClick={action('click on link')} to="/one">Breadcrumb1</Breadcrumb>
   </Story>
   <Story name="BreadCrumb2">
-    <Breadcrumb to="/two">Breadcrumb2</Breadcrumb>
+    <Breadcrumb onClick={action('click on link')} to="/two">Breadcrumb2</Breadcrumb>
   </Story>
   <Story name="BreadCrumb3">
-    <Breadcrumb to="/two">Breadcrumb3</Breadcrumb>
+    <Breadcrumb onClick={action('click on link')} to="/two">Breadcrumb3</Breadcrumb>
   </Story>
 </Preview>
 
