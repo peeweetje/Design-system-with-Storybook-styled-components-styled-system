@@ -9,6 +9,7 @@ import {
   BreadCrumb,
   BreadcrumbPortal,
 } from "./components/breadcrumb/BreadCrumb";
+import Button from "./components/classy-ui-button/classy-ui-button";
 
 const App: FC = () => {
   const [showModal, setModal] = useState(false);
@@ -36,6 +37,7 @@ const App: FC = () => {
       <ButtonStyledSystem onClick={closeModal} variant="primary">
         Primary
       </ButtonStyledSystem>
+      <Button disabled={false}>Classy-UI</Button>
       {!showModal && (
         <Modal onClick={openModal}>
           <HeadingStyling>Modal heading</HeadingStyling>
