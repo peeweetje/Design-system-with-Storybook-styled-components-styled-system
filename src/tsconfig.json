@@ -13,8 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
-    "rootDirs": ["src", "stories"]
+    "jsx": "react-jsx",
+    "rootDirs": ["src", "stories"],
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src"]
 }
