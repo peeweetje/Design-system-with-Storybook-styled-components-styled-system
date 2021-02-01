@@ -1,40 +1,25 @@
-import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
 
-import theme from "./theme.tsx";
+import theme from './theme.tsx';
 
-<Meta title="Design System|Colors" />
+<Meta title='Design System|Colors' />
 
 # Colors
 
 <ColorPalette>
   <ColorItem
-    title="theme.colors.blue"
-    subtitle="Blue"
-    colors={[...theme.colors.blues.map(blue => blue)]}
+    title='theme.colors.blue'
+    subtitle='Blue'
+    colors={[...theme.colors.blues.map((blue) => blue)]}
   />
   <ColorItem
-    title="theme.colors.teal"
-    subtitle="Teal"
-    colors={[...theme.colors.teals.map(teal => teal)]}
+    title='theme.colors.teal'
+    subtitle='Teal'
+    colors={[...theme.colors.teals.map((teal) => teal)]}
   />
   <ColorItem
-    title="theme.colors.grey"
-    subtitle="Grey"
-    colors={[...theme.colors.greys.map(grey => grey)]}
-  />
-  <ColorItem
-    title="theme.colors.blue"
-    subtitle="Blue Shades"
-    colors={[
-      theme.colors.blue100,
-      theme.colors.blue200,
-      theme.colors.blue300,
-      theme.colors.blue400,
-      theme.colors.blue500,
-      theme.colors.blue600,
-      theme.colors.blue700,
-      theme.colors.blue800,
-      theme.colors.blue900,
-    ]}
+    title='theme.colors.grey'
+    subtitle='Grey'
+    colors={[...theme.colors.greys.map((grey) => grey)]}
   />
 </ColorPalette>
