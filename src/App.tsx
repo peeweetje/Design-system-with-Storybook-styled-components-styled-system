@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { StyledButton } from './components/button/Button';
 import Box from './components/box/Box';
 import Header from './components/header/Header';
-import ButtonStyledSystem from './components/button-styled-system/ButtonStyledSystem';
 import Modal from './components/modal/Modal';
 
 const App: FC = () => {
@@ -29,9 +28,6 @@ const App: FC = () => {
       >
         hello
       </Box>
-      <ButtonStyledSystem onClick={closeModal} variant='primary'>
-        Primary
-      </ButtonStyledSystem>
       {!showModal && (
         <Modal onClick={openModal}>
           <HeadingStyling>Modal heading</HeadingStyling>
