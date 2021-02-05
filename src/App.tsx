@@ -1,7 +1,6 @@
 import React, { FC, useState } from 'react';
 import styled from 'styled-components';
 import { StyledButton } from './components/button/Button';
-import Box from './components/box/Box';
 import Header from './components/header/Header';
 import Modal from './components/modal/Modal';
 
@@ -16,18 +15,6 @@ const App: FC = () => {
       <StyledButton primary='primary' onClick={() => console.log('clicked')}>
         Styled button
       </StyledButton>
-      <Box
-        color='white'
-        bg='blue'
-        m={2}
-        p={2}
-        alignItems='center'
-        justifyContent='center'
-        width='fit-content'
-        borderRadius={4}
-      >
-        hello
-      </Box>
       {!showModal && (
         <Modal onClick={openModal}>
           <HeadingStyling>Modal heading</HeadingStyling>
