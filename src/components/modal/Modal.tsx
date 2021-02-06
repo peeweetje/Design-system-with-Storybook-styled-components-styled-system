@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from "react";
-import styled from "styled-components";
+import React, { FC, ReactNode } from 'react';
+import styled from 'styled-components';
 
 export interface ModalProps {
   /** Description of onClick function which returns void **/
@@ -25,7 +25,7 @@ export const StyledModal = styled.div<ModalProps>`
   padding: 1em;
   z-index: 1;
   border-radius: 3px;
-  border: 2px solid ${props => props.theme.colors.blues[3]};
+  border: 2px solid ${(props) => props.theme.colors.blues[3]};
   background-color: white;
   transition: all 0.3s ease-out;
 `;
