@@ -1,4 +1,4 @@
 ### `start project`
 
--> npm run storybook.
--> npm start => documentation-page.
+> - npm run storybook.
+> - npm start => documentation-page.
