@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 
-export const AppStyling = styled.div`
+export const AppStyling = styled.main`
    display: flex;
+   justify-content: center;
 `
 
 export const ButtonStyling = styled.button`

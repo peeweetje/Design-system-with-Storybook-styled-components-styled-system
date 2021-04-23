@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import {StyledButton} from './button.styles'
+import { BtnContainer } from './button.styles';
 
 export interface ButtonProps {
   /** Description of onClick function which returns void **/
@@ -22,16 +22,14 @@ export const Button: FC<ButtonProps> = ({
   secondary,
   disabled = false,
 }) => (
-  <StyledButton
+  <BtnContainer
     primary={primary}
     secondary={secondary}
     disabled={disabled}
     onClick={onClick}
   >
     {children}
-  </StyledButton>
+  </BtnContainer>
 );
 
 export default Button;
-
-

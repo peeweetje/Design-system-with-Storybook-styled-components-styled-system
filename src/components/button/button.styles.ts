@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { ButtonProps } from './Button';
 
 
-export const StyledButton = styled.button<ButtonProps>`
+export const BtnContainer = styled.button<ButtonProps>`
   border-radius: 3px;
   border: 2px solid ${(props) => props.theme.colors.blues[3]};
   margin: 0 8px;

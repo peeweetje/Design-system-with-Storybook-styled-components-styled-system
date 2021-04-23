@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { StyledButton } from '../../../components/button/button.styles';
+import { BtnContainer } from '../../../components/button/button.styles';
 import Sidebar from '../sidebar/sidebar';
 import { AppStyling } from './app.styles';
 
@@ -7,9 +7,9 @@ const App: FC = () => {
   return (
     <AppStyling>
       <Sidebar />
-      <StyledButton primary='primary' onClick={() => console.log('clicked')}>
-        Styled button
-      </StyledButton>
+      <BtnContainer primary='primary' onClick={() => console.log('clicked')}>
+        click on me
+      </BtnContainer>
     </AppStyling>
   );
 };
