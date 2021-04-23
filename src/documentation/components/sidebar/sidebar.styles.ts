@@ -6,8 +6,8 @@ export const ContainerSidebar = styled.nav`
     bottom: 0;
     left: 0;
     overflow: auto;
-    width: 11.625rem;
-    background: #333;
+    width: 200px;
+    background:  ${(props) => props.theme.colors.greys[8]};
     color: #fff;
   `
 
