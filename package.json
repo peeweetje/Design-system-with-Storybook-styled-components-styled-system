@@ -8,7 +8,6 @@
     "@types/react-dom": "17.0.0",
     "@types/react-router-dom": "^5.1.6",
     "babel-preset-react-app": "^10.0.0",
-    "classy-ui": "^10.0.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
@@ -30,7 +29,7 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "git add"
+      "git commit"
     ]
   },
   "husky": {
@@ -59,6 +58,7 @@
     "@storybook/addon-knobs": "^6.2.8",
     "@storybook/addon-links": "^6.2.8",
     "@storybook/addon-essentials": "^6.2.8",
+    "@react-theming/storybook-addon": "^1.1.1",
     "@storybook/addons": "^6.2.8",
     "@storybook/react": "^6.2.8",
     "@storybook/preset-create-react-app": "^3.1.7",

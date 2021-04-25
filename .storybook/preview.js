@@ -1,13 +1,19 @@
-import React from "react";
+import React from 'react';
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from "styled-components";
-import theme from "../src/styles/theme";
+import { withThemes } from '@react-theming/storybook-addon';
+import { ThemeProvider } from 'styled-components';
+import theme from '../src/styles/theme';
 
-addDecorator(storyFn => <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>)
-
+addDecorator(withThemes(ThemeProvider, [theme]));
 
 export const parameters = {
-    actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: { expanded: true },
-    
-  }
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  controls: { expanded: true },
+  options: {
+    storySort: {
+      method: 'alphabetical',
+      order: [],
+      locales: '',
+    },
+  },
+};
