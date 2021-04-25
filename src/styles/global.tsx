@@ -1,11 +1,11 @@
-import { createGlobalStyle, css } from "styled-components";
-import theme from "./theme";
-import { typography } from "./typography";
+import { createGlobalStyle, css } from 'styled-components';
+import theme from './theme';
+import { typography } from './typography';
 
 export const bodyStyles = css`
   font-family: ${typography.type.primary};
   font-size: ${typography.size.s3}px;
-  color: ${theme.colors.greys[7]};
+  color: ${theme.colors.grey[7]};
   margin: 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -72,7 +72,7 @@ export const bodyStyles = css`
     padding: 11px 1rem;
     white-space: pre-wrap;
     background: rgba(0, 0, 0, 0.05);
-    color: ${theme.colors.greys[7]};
+    color: ${theme.colors.grey[7]};
     border-radius: 3px;
     margin: 1rem 0;
   }
@@ -81,7 +81,7 @@ export const bodyStyles = css`
 // Allow design system consumers to access font settings but control how and
 // where they load the font.
 export const fontUrl =
-  "https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap";
+  'https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap';
 
 export const GlobalStyle = createGlobalStyle`
   body {
