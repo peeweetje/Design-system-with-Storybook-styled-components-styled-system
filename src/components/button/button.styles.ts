@@ -32,7 +32,7 @@ export const BtnContainer = styled.button<ButtonProps>`
       cursor: not-allowed;
       &:hover {
         background-color: ${(props) => props.theme.colors.greys[5]};
-        color: white;
+        color: #000;
       }
     `};
 `;

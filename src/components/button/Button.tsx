@@ -20,7 +20,7 @@ export const Button: FC<ButtonProps> = ({
   children,
   primary,
   secondary,
-  disabled = false,
+  disabled,
 }) => (
   <BtnContainer
     primary={primary}
