@@ -4,35 +4,38 @@ import { ButtonProps } from './Button';
 
 export const BtnContainer = styled.button<ButtonProps>`
   border-radius: 3px;
-  border: 2px solid ${(props) => props.theme.colors.blues[3]};
+  border: 2px solid ${(props) => props.theme.colors.blue[5]};
   margin: 0 8px;
   padding: 8px 16px;
   &:hover {
-    background-color: ${(props) => props.theme.colors.blues[5]};
+    background-color: ${(props) => props.theme.colors.blue[5]};
   }
   ${(props) =>
-    props.primary &&
+    props.variant ==="primary" &&
     css`
-      background-color: ${(props) => props.theme.colors.blues[6]};
-      border: 2px solid ${(props) => props.theme.colors.blues[6]};
-      color: #fff;
+      background-color: ${(props) => props.theme.colors.blue[6]};
+      border: 2px solid ${(props) => props.theme.colors.blue[6]};
+      color:  ${(props) => props.theme.colors.grey[0]};
     `};
   ${(props) =>
-    props.secondary &&
+    props.variant==="secondary" &&
     css`
-      background-color: ${(props) => props.theme.colors.greys[0]};
-      color: #000;
+      background-color: ${(props) => props.theme.colors.grey[0]};
+      color:${(props) => props.theme.colors.grey[9]};
+      &:hover {
+        color:  ${(props) => props.theme.colors.grey[0]};
+      }
     `};
   ${(props) =>
-    props.disabled &&
+    props.variant==="disabled" &&
     css`
-      background-color: ${(props) => props.theme.colors.greys[4]};
-      color: black;
-      border: 2px solid ${(props) => props.theme.colors.greys[4]};
+      background-color: ${(props) => props.theme.colors.grey[5]};
+      color: ${(props) => props.theme.colors.grey[0]};
+      border: 2px solid ${(props) => props.theme.colors.grey[5]};
       cursor: not-allowed;
       &:hover {
-        background-color: ${(props) => props.theme.colors.greys[5]};
-        color: #000;
+        background-color: ${(props) => props.theme.colors.grey[6]};
+        color: ${(props) => props.theme.colors.grey[0]};
       }
     `};
 `;
