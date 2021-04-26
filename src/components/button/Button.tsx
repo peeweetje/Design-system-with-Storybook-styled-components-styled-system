@@ -5,29 +5,13 @@ export interface ButtonProps {
   /** Description of onClick function which returns void **/
   onClick: () => void;
   /** Text you want to display in your button, or an icon **/
-  children?: ReactNode | null;
-  /**  Button variant - primary, secondary, disabled**/
-  disabled?: boolean;
-  primary?: string;
-  secondary?: string;
+  children: ReactNode | null;
+
+  variant: 'primary' | 'secondary' | 'disabled';
 }
 
-/**
- * This is a component description and should sit directly above your component
- */
-export const Button: FC<ButtonProps> = ({
-  onClick,
-  children,
-  primary,
-  secondary,
-  disabled,
-}) => (
-  <BtnContainer
-    primary={primary}
-    secondary={secondary}
-    disabled={disabled}
-    onClick={onClick}
-  >
+export const Button: FC<ButtonProps> = ({ onClick, children, variant }) => (
+  <BtnContainer onClick={onClick} variant={variant}>
     {children}
   </BtnContainer>
 );
