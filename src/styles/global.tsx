@@ -27,55 +27,6 @@ export const bodyStyles = css`
     margin: 0;
     padding: 0;
   }
-  button,
-  input,
-  textarea,
-  select {
-    font-family: ${typography.type.primary};
-  }
-  sub,
-  sup {
-    font-size: 0.8em;
-  }
-  sub {
-    bottom: -0.2em;
-  }
-  sup {
-    top: -0.2em;
-  }
-  b,
-  em {
-    font-weight: ${typography.weight.bold};
-  }
-  hr {
-    border: none;
-    border-top: 1px solid ${theme.colors.blue};
-    clear: both;
-    margin-bottom: 1.25rem;
-  }
-  code,
-  pre {
-    font-family: ${typography.type.code};
-    font-size: ${typography.size.s2} -1px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  code {
-    display: inline-block;
-    padding-left: 2px;
-    padding-right: 2px;
-    vertical-align: baseline;
-    color: ${theme.colors.blue};
-  }
-  pre {
-    line-height: 18px;
-    padding: 11px 1rem;
-    white-space: pre-wrap;
-    background: rgba(0, 0, 0, 0.05);
-    color: ${theme.colors.grey[7]};
-    border-radius: 3px;
-    margin: 1rem 0;
-  }
 `;
 
 // Allow design system consumers to access font settings but control how and
