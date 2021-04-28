@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { ButtonProps } from './Button';
+import { ButtonProps } from './button';
 
 
 export const BtnContainer = styled.button<ButtonProps>`
@@ -29,12 +29,12 @@ export const BtnContainer = styled.button<ButtonProps>`
   ${(props) =>
     props.variant==="disabled" &&
     css`
-      background-color: ${(props) => props.theme.colors.grey[5]};
+      background-color: ${(props) => props.theme.colors.grey[4]};
       color: ${(props) => props.theme.colors.grey[0]};
-      border: 2px solid ${(props) => props.theme.colors.grey[5]};
+      border: 2px solid ${(props) => props.theme.colors.grey[4]};
       cursor: not-allowed;
       &:hover {
-        background-color: ${(props) => props.theme.colors.grey[6]};
+        background-color: ${(props) => props.theme.colors.grey[5]};
         color: ${(props) => props.theme.colors.grey[0]};
       }
     `};
