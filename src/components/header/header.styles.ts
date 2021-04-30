@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const NavHeader = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.grey[0]};
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
   padding: 26px 20px;
   width: 100%;
