@@ -17,6 +17,9 @@ const Sidebar: FC = () => {
         <NavItem>
           <StyledLink to='/button'>Button</StyledLink>
         </NavItem>
+        <NavItem>
+          <StyledLink to='/header'>Header</StyledLink>
+        </NavItem>
       </NavList>
     </ContainerSidebar>
   );
