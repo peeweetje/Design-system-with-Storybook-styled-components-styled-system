@@ -4,7 +4,7 @@ import { BtnContainer } from '../../../components/button/button.styles';
 const ButtonPage: FC = () => {
   return (
     <>
-      <div>button-page under construction</div>
+      <>button-page under construction</>
       <BtnContainer variant='primary' onClick={() => console.log('clicked')}>
         click on me
       </BtnContainer>
