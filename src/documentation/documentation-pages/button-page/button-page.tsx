@@ -6,7 +6,13 @@ const ButtonPage: FC = () => {
     <>
       <>button-page under construction</>
       <BtnContainer variant='primary' onClick={() => console.log('clicked')}>
-        click on me
+        primary
+      </BtnContainer>
+      <BtnContainer variant='secondary' onClick={() => console.log('clicked')}>
+        secondary
+      </BtnContainer>
+      <BtnContainer variant='disabled' onClick={() => console.log('clicked')}>
+        secondary
       </BtnContainer>
     </>
   );
