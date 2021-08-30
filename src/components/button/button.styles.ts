@@ -30,7 +30,7 @@ export const BtnContainer = styled.button<ButtonProps>`
     props.variant==="disabled" &&
     css`
       background-color: ${(props) => props.theme.colors.grey[4]};
-      color: ${(props) => props.theme.colors.grey[0]};
+      color: ${(props) => props.theme.colors.grey[9]};
       border: 2px solid ${(props) => props.theme.colors.grey[4]};
       cursor: not-allowed;
       &:hover {
