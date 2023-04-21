@@ -60,7 +60,7 @@
     "@storybook/addon-essentials": "^6.2.8",
     "@react-theming/storybook-addon": "^1.1.1",
     "@storybook/addons": "^6.2.8",
-    "@storybook/react": "^6.2.8",
+    "@storybook/react": "^7.0.6",
     "@storybook/preset-create-react-app": "^7.0.6",
     "@testing-library/dom": "^7.29.0",
     "@testing-library/react": "^11.2.2",
