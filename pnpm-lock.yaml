@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@storybook/addon-a11y': ^8.1.3
   '@storybook/addon-essentials': ^8.1.3
   '@storybook/addon-interactions': ^8.1.3
   '@storybook/addon-links': ^8.1.3
@@ -29,6 +30,7 @@ dependencies:
   react-dom: 18.3.1_react@18.3.1
 
 devDependencies:
+  '@storybook/addon-a11y': 8.1.3
   '@storybook/addon-essentials': 8.1.3_cnzxysstfj3si5wjwtfcb7te2q
   '@storybook/addon-interactions': 8.1.3
   '@storybook/addon-links': 8.1.3_react@18.3.1
@@ -2200,6 +2202,13 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
+  /@storybook/addon-a11y/8.1.3:
+    resolution: {integrity: sha512-CJCfXD9cB5jyPlQFo9WZSTeT7l9UPrI0Bte8ytkMU8EquB7PI701OT+CHLsSSjb75tZzGSM7f1+TjUgI9QIhYw==}
+    dependencies:
+      '@storybook/addon-highlight': 8.1.3
+      axe-core: 4.9.1
+    dev: true
+
   /@storybook/addon-actions/8.1.3:
     resolution: {integrity: sha512-XG6clFT/lPOHEm/tHdWO3E5G28HIock2272BZNr15+DqVTRYyGRhuFQKxPb+CdRWCpT1VQnWS+L9S1+95wDlJw==}
     dependencies:
@@ -3756,6 +3765,11 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       possible-typed-array-names: 1.0.0
+    dev: true
+
+  /axe-core/4.9.1:
+    resolution: {integrity: sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==}
+    engines: {node: '>=4'}
     dev: true
 
   /babel-core/7.0.0-bridge.0_@babel+core@7.24.5:
