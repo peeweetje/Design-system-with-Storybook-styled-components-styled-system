@@ -4,6 +4,7 @@ import '../src/index.css';
 
 const preview: Preview = {
   parameters: {
+    actions: { argTypesRegex: '^on.*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -14,7 +15,7 @@ const preview: Preview = {
   decorators: [
     withThemeByClassName<Renderer>({
       themes: {
-        light: '',
+        light: 'light',
         dark: 'dark',
       },
       defaultTheme: 'light',
