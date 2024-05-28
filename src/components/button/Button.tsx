@@ -34,8 +34,8 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const mode = primary
-    ? 'bg-blue-500 hover:bg-blue-700 text-white'
-    : 'bg-gray-500 hover:bg-gray-700 text-white';
+    ? 'bg-blue-50 hover:bg-blue-60 text-white'
+    : 'bg-grey-50 hover:bg-grey-60 text-white';
 
   const sizeClass = {
     small: 'text-xs px-2 py-1',
