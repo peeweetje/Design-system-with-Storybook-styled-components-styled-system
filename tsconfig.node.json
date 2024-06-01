@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["@testing-library/jest-dom/vitest"],
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
