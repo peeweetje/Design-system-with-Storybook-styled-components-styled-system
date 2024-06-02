@@ -15,6 +15,9 @@ const config: StorybookConfig = {
     '@storybook/addon-toolbars',
     '@storybook/addon-backgrounds',
   ],
+  docs: {
+    defaultName: 'Documentation',
+  },
   framework: {
     name: '@storybook/react-vite',
     options: {},

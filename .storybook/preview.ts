@@ -22,6 +22,7 @@ const preview: Preview = {
       attributeName: 'theme-mode',
     }),
   ],
+  tags: ['autodocs'],
 };
 
 export default preview;
