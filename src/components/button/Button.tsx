@@ -14,6 +14,10 @@ interface ButtonProps {
    */
   size?: 'small' | 'medium' | 'large';
   /**
+   * which variants are available?
+   */
+  variant?: 'info' | 'succes' | 'warning' | 'delete';
+  /**
    * Button contents
    */
   label: string;
@@ -31,11 +35,19 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
+  variant,
   ...props
 }: ButtonProps) => {
   const mode = primary
-    ? 'bg-blue-50 hover:bg-blue-60 text-white'
-    : 'bg-grey-50 hover:bg-grey-60 text-white';
+    ? 'bg-blue-60 hover:bg-blue-70 text-white'
+    : 'bg-grey-60 hover:bg-grey-70 text-white';
+
+  const variantClass = {
+    info: 'bg-blue-70 hover:bg-blue-80 text-white',
+    success: 'bg-green-70 hover:bg-green-80 text-white',
+    warning: 'bg-yellow-70 hover:bg-yellow-80 text-white',
+    delete: 'bg-red-70 hover:bg-red-80 text-white',
+  };
 
   const sizeClass = {
     small: 'text-xs px-2 py-1',
@@ -46,7 +58,7 @@ export const Button = ({
   return (
     <button
       type='button'
-      className={`font-bold rounded ${sizeClass[size]} ${mode}`}
+      className={`font-bold rounded ${sizeClass[size]} ${variant ? variantClass[variant] : mode}`}
       style={{ backgroundColor }}
       {...props}
     >

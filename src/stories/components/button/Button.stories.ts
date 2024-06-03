@@ -52,10 +52,34 @@ export const Small: Story = {
   },
 };
 
+export const Delete: Story = {
+  args: {
+    primary: true,
+    label: 'Delete now',
+    variant: 'delete',
+  },
+};
+
+export const Success: Story = {
+  args: {
+    primary: true,
+    label: 'Delete now',
+    variant: 'success',
+  },
+};
+
+export const Info: Story = {
+  args: {
+    primary: true,
+    label: 'Delete now',
+    variant: 'info',
+  },
+};
+
 export const Warning: Story = {
   args: {
     primary: true,
     label: 'Delete now',
-    backgroundColor: '#DC2626',
+    variant: 'warning',
   },
 };
