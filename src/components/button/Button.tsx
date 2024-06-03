@@ -27,6 +27,25 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
+const buttonStyles = {
+  default: 'font-medium rounded',
+  size: {
+    small: 'text-xs px-2 py-1',
+    medium: 'text-sm px-3 py-2',
+    large: 'text-lg px-4 py-3',
+  },
+  variant: {
+    info: 'bg-blue-70 hover:bg-blue-80 text-white',
+    success: 'bg-green-70 hover:bg-green-80 text-white',
+    warning: 'bg-yellow-70 hover:bg-yellow-80 text-white',
+    delete: 'bg-red-70 hover:bg-red-80 text-white',
+  },
+  mode: {
+    primary: 'bg-blue-60 hover:bg-blue-70 text-white',
+    default: 'bg-grey-60 hover:bg-grey-70 text-white',
+  },
+};
+
 /**
  * Primary UI component for user interaction
  */
@@ -38,27 +57,14 @@ export const Button = ({
   variant,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? 'bg-blue-60 hover:bg-blue-70 text-white'
-    : 'bg-grey-60 hover:bg-grey-70 text-white';
-
-  const variantClass = {
-    info: 'bg-blue-70 hover:bg-blue-80 text-white',
-    success: 'bg-green-70 hover:bg-green-80 text-white',
-    warning: 'bg-yellow-70 hover:bg-yellow-80 text-white',
-    delete: 'bg-red-70 hover:bg-red-80 text-white',
-  };
-
-  const sizeClass = {
-    small: 'text-xs px-2 py-1',
-    medium: 'text-sm px-3 py-2',
-    large: 'text-lg px-4 py-3',
-  };
+  const mode = primary ? buttonStyles.mode.primary : buttonStyles.mode.default;
+  const variantClass = variant ? buttonStyles.variant[variant] : '';
+  const sizeClass = buttonStyles.size[size];
 
   return (
     <button
       type='button'
-      className={`font-bold rounded ${sizeClass[size]} ${variant ? variantClass[variant] : mode}`}
+      className={`${buttonStyles.default} ${sizeClass} ${variantClass} ${mode}`}
       style={{ backgroundColor }}
       {...props}
     >
