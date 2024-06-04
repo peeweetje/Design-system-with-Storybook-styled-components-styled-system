@@ -14,7 +14,7 @@ describe('Testing the button functionality', async () => {
   it('should render correctly with default props and be visible', () => {
     const { container } = render(<Button label='Default Button' />);
     expect(container.firstChild).toHaveClass(
-      'text-sm px-3 py-2 bg-grey-50 hover:bg-grey-60 text-white'
+      'font-medium rounded text-sm px-3 py-2 bg-grey-60 hover:bg-grey-70 text-white'
     );
     expect(container.firstChild).toBeVisible();
   });
