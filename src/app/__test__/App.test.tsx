@@ -8,8 +8,8 @@ import App from '../App';
 describe('Renders main page correctly', async () => {
   it('Should render the page correctly', async () => {
     render(<App />);
-    const h1 = await screen.queryByText('Work in progress');
+    const sidebarItem = await screen.queryByText('Button');
 
-    expect(h1).toBeInTheDocument();
+    expect(sidebarItem).toBeInTheDocument();
   });
 });
