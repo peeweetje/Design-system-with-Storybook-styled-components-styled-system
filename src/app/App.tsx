@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import Sidebar from '../components/sidebar/Sidebar';
 
 const App = () => {
   return (
-    <h1 className='flex justify-center text-3xl font-bold underline'>
-      Work in progress
-    </h1>
+    <div className='flex h-screen'>
+      <Sidebar />
+    </div>
   );
 };
 
