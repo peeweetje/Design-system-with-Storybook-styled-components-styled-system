@@ -1,7 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, fireEvent, screen } from '@testing-library/react';
 import { Button } from '../Button';
-import '@testing-library/jest-dom/vitest';
 
 describe('Testing the button functionality', async () => {
   it('should trigger onClick handler when clicked', () => {

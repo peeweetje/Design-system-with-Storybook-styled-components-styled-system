@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, fireEvent, screen } from '@testing-library/react';
 import { Header } from '../Header';
-import '@testing-library/jest-dom/vitest';
 
 describe('Testing the Header functionality', async () => {
   it('should render correctly when user is logged in', () => {
