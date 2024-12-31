@@ -10,6 +10,7 @@ const meta: Meta<typeof Page> = {
     // More on Story layout: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
+  tags: ['deprecated'],
 };
 
 export default meta;

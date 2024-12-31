@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
     '@storybook/addon-toolbars',
     '@storybook/addon-backgrounds',
+    'storybook-addon-tag-badges',
   ],
   docs: {
     defaultName: 'Documentation',

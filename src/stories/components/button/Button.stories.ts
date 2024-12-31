@@ -44,6 +44,7 @@ export const Large: Story = {
     size: 'large',
     label: 'Button',
   },
+  tags: ['experimental'],
 };
 
 export const Small: Story = {
