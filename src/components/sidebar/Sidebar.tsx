@@ -1,28 +1,40 @@
-// src/components/Sidebar.js
 import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Menu, X } from 'lucide-react';
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+interface SidebarProps {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
+  const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div
-      className={`fixed top-0 left-0 h-screen w-${isOpen ? '64' : '16'} bg-grey-80 text-white transform transition-transform
-      `}
+      className={`fixed top-0 left-0 h-screen bg-grey-80 text-white transition-all duration-300 ease-in-out ${
+        isOpen ? 'w-64' : 'w-16'
+      }`}
     >
-      <button
-        onClick={toggleSidebar}
-        className='absolute top-0 right-4 p-4 text-white'
+      <Button
+        variant='ghost'
+        size='icon'
+        className='absolute top-4 left-4 text-white'
+        onClick={toggle}
       >
-        ☰
-      </button>
-      <ul className='mt-12'>
-        <li className='px-3 py-1'>Button</li>
-        <li className='px-3 py-1'>Header</li>
-      </ul>
+        {isOpen ? <X size={20} /> : <Menu size={20} />}
+        <span className='sr-only'>Toggle Sidebar</span>
+      </Button>
+      <nav className='mt-16'>
+        <ul className='space-y-2'>
+          <li className='px-4 py-2 hover:bg-gray-700 cursor-pointer'>
+            {isOpen ? 'Button' : 'B'}
+          </li>
+          <li className='px-4 py-2 hover:bg-gray-700 cursor-pointer'>
+            {isOpen ? 'Header' : 'H'}
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };
