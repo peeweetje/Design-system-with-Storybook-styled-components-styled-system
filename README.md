@@ -1,10 +1,10 @@
 ## WORK IN PROGRESS.
 
-> - Migrating to react + vite
-> - Update storybook to the latest version.
+> - Migrating to react + vite => Done
+> - Update storybook to the latest version => Done
 
 ### how to start
 
-> - pnpm run storybook => run storybook
+> - pnpm storybook => run storybook
 > - pnpm dev => run documentation
 > - pnpm test => run tests.
