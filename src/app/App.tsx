@@ -7,7 +7,7 @@ const App = () => {
     <div className='flex min-h-screen'>
       <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
       <main
-        className={`flex-1 p-4 transition-all duration-300 ${isSidebarOpen ? 'ml-64' : 'ml-16'}`}
+        className={`flex-1 p-4 transition-all duration-300 ${isSidebarOpen ? 'ml-32' : 'ml-16'}`}
       >
         <h1 className='text-2xl font-bold mb-4'>
           Welcome to the Documentation

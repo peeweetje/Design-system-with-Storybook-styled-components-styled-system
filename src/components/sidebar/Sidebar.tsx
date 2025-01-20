@@ -13,24 +13,25 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
   return (
     <div
       className={`fixed top-0 left-0 h-screen bg-grey-80 text-white transition-all duration-300 ease-in-out ${
-        isOpen ? 'w-64' : 'w-16'
+        isOpen ? 'w-32' : 'w-16'
       }`}
     >
       <Button
         variant='ghost'
         size='icon'
-        className='absolute top-4 left-4 text-white'
+        className='absolute top-4 left-4'
         onClick={toggle}
       >
         {isOpen ? <X size={20} /> : <Menu size={20} />}
         <span className='sr-only'>Toggle Sidebar</span>
       </Button>
-      <nav className='mt-16'>
+
+      <nav className='mt-24'>
         <ul className='space-y-2'>
-          <li className='px-4 py-2 hover:bg-gray-700 cursor-pointer'>
+          <li className='px-4 py-2 hover:bg-grey-70 cursor-pointer'>
             {isOpen ? 'Button' : 'B'}
           </li>
-          <li className='px-4 py-2 hover:bg-gray-700 cursor-pointer'>
+          <li className='px-4 py-2 hover:bg-grey-70 cursor-pointer'>
             {isOpen ? 'Header' : 'H'}
           </li>
         </ul>
