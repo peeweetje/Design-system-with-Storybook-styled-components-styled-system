@@ -34,23 +34,7 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    primary: true,
-    size: 'large',
-    label: 'Button',
-  },
-  tags: ['experimental'],
-};
-
-export const Small: Story = {
-  args: {
-    primary: true,
-    size: 'small',
+    primary: false,
     label: 'Button',
   },
 };
@@ -85,4 +69,29 @@ export const Delete: Story = {
     label: 'Button',
     variant: 'delete',
   },
+};
+
+export const Small: Story = {
+  args: {
+    primary: true,
+    size: 'small',
+    label: 'Button',
+  },
+};
+
+export const Medium: Story = {
+  args: {
+    primary: true,
+    size: 'medium',
+    label: 'Button',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    primary: true,
+    size: 'large',
+    label: 'Button',
+  },
+  tags: ['experimental'],
 };
