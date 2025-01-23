@@ -16,7 +16,7 @@ interface ButtonProps {
   /**
    * which variants are available?
    */
-  variant?: 'info' | 'succes' | 'warning' | 'delete';
+  variant?: 'info' | 'success' | 'warning' | 'delete';
   /**
    * Button contents
    */
@@ -30,19 +30,19 @@ interface ButtonProps {
 const buttonStyles = {
   default: 'font-medium rounded',
   size: {
-    small: 'text-xs px-2 py-1',
-    medium: 'text-sm px-3 py-2',
-    large: 'text-lg px-4 py-3',
+    small: 'text-xs px-1 py-1',
+    medium: 'text-sm px-1.5 py-1.5',
+    large: 'text-lg px-2 py-2',
   },
   variant: {
-    info: 'bg-blue-70 hover:bg-blue-80 text-white',
-    success: 'bg-green-70 hover:bg-green-80 text-white',
-    warning: 'bg-yellow-70 hover:bg-yellow-80 text-white',
-    delete: 'bg-red-70 hover:bg-red-80 text-white',
+    info: 'bg-blue-80 hover:bg-blue-90 text-white',
+    success: 'bg-green-80 hover:bg-green-90 text-white',
+    warning: 'bg-yellow-80 hover:bg-yellow-90 text-white',
+    delete: 'bg-red-80 hover:bg-red-90 text-white',
   },
   mode: {
-    primary: 'bg-blue-60 hover:bg-blue-70 text-white',
-    default: 'bg-grey-60 hover:bg-grey-70 text-white',
+    primary: 'bg-blue-80 hover:bg-blue-70 text-white',
+    default: 'bg-grey-80 hover:bg-grey-70 text-white',
   },
 };
 
