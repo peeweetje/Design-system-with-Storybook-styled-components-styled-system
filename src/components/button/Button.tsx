@@ -1,5 +1,8 @@
 import React from 'react';
 
+type ButtonSize = 'small' | 'medium' | 'large';
+type ButtonVariant = 'info' | 'success' | 'warning' | 'delete';
+
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -12,11 +15,11 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: ButtonSize;
   /**
-   * which variants are available?
+   * Which variants are available?
    */
-  variant?: 'info' | 'success' | 'warning' | 'delete';
+  variant?: ButtonVariant;
   /**
    * Button contents
    */
