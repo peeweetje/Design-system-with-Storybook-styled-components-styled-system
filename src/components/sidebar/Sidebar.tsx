@@ -7,7 +7,7 @@ interface SidebarProps {
   setIsOpen: (isOpen: boolean) => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
+const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -16,23 +16,24 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
         isOpen ? 'w-32' : 'w-16'
       }`}
     >
-      <Button
-        variant='ghost'
-        size='icon'
-        className='absolute top-4 left-4'
-        onClick={toggle}
-      >
-        {isOpen ? <X size={20} /> : <Menu size={20} />}
-        <span className='sr-only'>Toggle Sidebar</span>
-      </Button>
-
-      <nav className='mt-24'>
+      <nav role='navigation' className='mt-24'>
+        <Button
+          type='button'
+          size='icon'
+          className='absolute top-4 left-4 hover:bg-grey-70'
+          onClick={toggle}
+          aria-expanded={isOpen}
+          aria-label='Toggle Sidebar'
+        >
+          {isOpen ? <X size={20} /> : <Menu size={20} />}
+          <span className='sr-only'>Toggle Sidebar</span>
+        </Button>
         <ul className='space-y-2'>
-          <li className='px-4 py-2 hover:bg-grey-70 cursor-pointer'>
+          <li
+            className='px-4 py-2 hover:bg-grey-70 cursor-pointer'
+            tabIndex={0}
+          >
             {isOpen ? 'Button' : 'B'}
-          </li>
-          <li className='px-4 py-2 hover:bg-grey-70 cursor-pointer'>
-            {isOpen ? 'Header' : 'H'}
           </li>
         </ul>
       </nav>
