@@ -5,16 +5,10 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-onboarding',
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-themes',
-    '@storybook/addon-storysource',
-    '@storybook/addon-viewport',
-    '@storybook/addon-controls',
     '@storybook/addon-docs',
-    '@storybook/addon-toolbars',
-    '@storybook/addon-backgrounds',
-    'storybook-addon-tag-badges',
+    'storybook-addon-tag-badges'
   ],
   docs: {
     defaultName: 'Documentation',
