@@ -1,3 +1,144 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, [data-mode="dark"]) &);
+
+@theme {
+  /* Colors */
+  --color-grey-10: #F9FAFB;
+  --color-grey-20: #F3F4F6;
+  --color-grey-30: #E5E7EB;
+  --color-grey-40: #D1D5DB;
+  --color-grey-50: #9CA3AF;
+  --color-grey-60: #6B7280;
+  --color-grey-70: #4B5563;
+  --color-grey-80: #374151;
+  --color-grey-90: #1F2937;
+  --color-grey-100: #111827;
+
+  --color-blue-10: #EFF6FF;
+  --color-blue-20: #DBEAFE;
+  --color-blue-30: #BFDBFE;
+  --color-blue-40: #93C5FD;
+  --color-blue-50: #60A5FA;
+  --color-blue-60: #3B82F6;
+  --color-blue-70: #2563EB;
+  --color-blue-80: #1D4ED8;
+  --color-blue-90: #1E40AF;
+  --color-blue-100: #1E3A8A;
+
+  --color-indigo-10: #EEF2FF;
+  --color-indigo-20: #E0E7FF;
+  --color-indigo-30: #C7D2FE;
+  --color-indigo-40: #A5B4FC;
+  --color-indigo-50: #818CF8;
+  --color-indigo-60: #6366F1;
+  --color-indigo-70: #4F46E5;
+  --color-indigo-80: #4338CA;
+  --color-indigo-90: #3730A3;
+  --color-indigo-100: #312E81;
+
+  --color-purple-10: #F5F3FF;
+  --color-purple-20: #EDE9FE;
+  --color-purple-30: #DDD6FE;
+  --color-purple-40: #C4B5FD;
+  --color-purple-50: #A78BFA;
+  --color-purple-60: #8B5CF6;
+  --color-purple-70: #7C3AED;
+  --color-purple-80: #6D28D9;
+  --color-purple-90: #5B21B6;
+  --color-purple-100: #4C1D95;
+
+  --color-red-10: #FEF2F2;
+  --color-red-20: #FEE2E2;
+  --color-red-30: #FECACA;
+  --color-red-40: #FCA5A5;
+  --color-red-50: #F87171;
+  --color-red-60: #EF4444;
+  --color-red-70: #DC2626;
+  --color-red-80: #B91C1C;
+  --color-red-90: #991B1B;
+  --color-red-100: #7F1D1D;
+
+  --color-green-10: #ECFDF5;
+  --color-green-20: #D1FAE5;
+  --color-green-30: #A7F3D0;
+  --color-green-40: #6EE7B7;
+  --color-green-50: #34D399;
+  --color-green-60: #10B981;
+  --color-green-70: #059669;
+  --color-green-80: #047857;
+  --color-green-90: #065F46;
+  --color-green-100: #064E3B;
+
+  --color-yellow-10: #FFFBEB;
+  --color-yellow-20: #FEF3C7;
+  --color-yellow-30: #FDE68A;
+  --color-yellow-40: #FCD34D;
+  --color-yellow-50: #FBBF24;
+  --color-yellow-60: #F59E0B;
+  --color-yellow-70: #D97706;
+  --color-yellow-80: #B45309;
+  --color-yellow-90: #92400E;
+  --color-yellow-100: #78350F;
+
+  --color-pink-10: #FDF2F8;
+  --color-pink-20: #FCE7F3;
+  --color-pink-30: #FBCFE8;
+  --color-pink-40: #F9A8D4;
+  --color-pink-50: #F472B6;
+  --color-pink-60: #EC4899;
+  --color-pink-70: #DB2777;
+  --color-pink-80: #BE185D;
+  --color-pink-90: #9D174D;
+  --color-pink-100: #831843;
+
+  /* Extended Colors */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  /* Border Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
