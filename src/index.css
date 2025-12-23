@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
 
-@custom-variant dark (&:where(.dark, [data-mode="dark"]) &);
 
 @theme {
   /* Colors */
