@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@plugin "tailwindcss-animate";
+@import "tw-animate-css";
 
 
-@theme {
+@theme  {
   /* Colors */
   --color-grey-10: #F9FAFB;
   --color-grey-20: #F3F4F6;
