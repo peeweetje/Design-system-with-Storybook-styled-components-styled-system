@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -9,12 +10,12 @@ interface SidebarProps {
 
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
   const toggle = () => setIsOpen(!isOpen);
+  const navigate = useNavigate();
 
   return (
     <div
-      className={`fixed top-0 left-0 h-screen bg-grey-80 text-white transition-all duration-300 ease-in-out ${
-        isOpen ? 'w-32' : 'w-16'
-      }`}
+      className={`fixed top-0 left-0 h-screen bg-grey-80 text-white transition-all duration-300 ease-in-out ${isOpen ? 'w-32' : 'w-16'
+        }`}
     >
       <nav role='navigation' className='mt-24'>
         <Button
@@ -32,6 +33,14 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           <li
             className='px-4 py-2 hover:bg-grey-70 cursor-pointer'
             tabIndex={0}
+            onClick={() => navigate('/home')}
+          >
+            {isOpen ? 'Home' : 'H'}
+          </li>
+          <li
+            className='px-4 py-2 hover:bg-grey-70 cursor-pointer'
+            tabIndex={0}
+            onClick={() => navigate('/button')}
           >
             {isOpen ? 'Button' : 'B'}
           </li>

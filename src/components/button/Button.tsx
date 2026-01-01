@@ -38,10 +38,10 @@ const buttonStyles = {
     large: 'text-lg px-2 py-2',
   },
   variant: {
-    info: 'bg-blue-80 hover:bg-blue-90 text-white',
-    success: 'bg-green-80 hover:bg-green-90 text-white',
-    warning: 'bg-yellow-80 hover:bg-yellow-90 text-white',
-    delete: 'bg-red-80 hover:bg-red-90 text-white',
+    info: 'bg-blue-60 hover:bg-blue-70 text-white',
+    success: 'bg-green-60 hover:bg-green-70 text-white',
+    warning: 'bg-yellow-60 hover:bg-yellow-70 text-white',
+    delete: 'bg-red-60 hover:bg-red-70 text-white',
   },
   mode: {
     primary: 'bg-blue-80 hover:bg-blue-70 text-white',
@@ -60,7 +60,11 @@ export const Button = ({
   variant,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? buttonStyles.mode.primary : buttonStyles.mode.default;
+  const mode = primary
+    ? buttonStyles.mode.primary
+    : variant
+      ? ''
+      : buttonStyles.mode.default;
   const variantClass = variant ? buttonStyles.variant[variant] : '';
   const sizeClass = buttonStyles.size[size];
 
