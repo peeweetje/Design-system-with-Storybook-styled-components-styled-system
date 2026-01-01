@@ -1,21 +1,26 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from '../components/sidebar/Sidebar';
+import ButtonPage from './pages/ButtonPage';
+import HomePage from './pages/HomePage';
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
   return (
     <div className='flex min-h-screen'>
-      <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
+      <Sidebar
+        isOpen={isSidebarOpen}
+        setIsOpen={setIsSidebarOpen}
+      />
       <main
         className={`flex-1 p-4 transition-all duration-300 ${isSidebarOpen ? 'ml-32' : 'ml-16'}`}
       >
-        <h1 className='text-2xl font-bold mb-4'>
-          Welcome to the Documentation
-        </h1>
-        <p>
-          This is the main content area. The sidebar should be visible on the
-          left and push this content.
-        </p>
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/button" element={<ButtonPage />} />
+        </Routes>
       </main>
     </div>
   );
