@@ -1,0 +1,1 @@
+import{t as e}from"./lib-B7anklVu.js";export{e as MDXProvider};
